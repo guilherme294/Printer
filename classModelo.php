@@ -12,9 +12,5 @@ if ($stmt = mysqli_prepare($conn, 'Insert into modelos (ds_modelo, path_toner, p
 values ("' . $ds_modelo . '","' . $path_toner . '","' . $path_id . '","' . $path_contador . '")')) {
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
+    echo "<script>document.location='cadModelos.php?sucess=yes'</script>";
 }
-
-
-
-
-?>
